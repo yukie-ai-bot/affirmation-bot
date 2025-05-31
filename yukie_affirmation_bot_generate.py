@@ -12,9 +12,10 @@ import os
 app = Flask(__name__)
 
 # --- 各種キー（Yukie用に差し替え） ---
-CHANNEL_ACCESS_TOKEN = 'ここにLINEのアクセストークンを貼る'
-CHANNEL_SECRET = ''
-OPENAI_API_KEY = 'ここにOpenAIのAPIキーを貼る'
+CHANNEL_ACCESS_TOKEN = 'lM85m7qbDpqrF6BUpHs3rXa9TQfUi4RMFquKPHub2QxtbZkZJH4EMp65O1JBzrS27axL+6Ey3so3AZNCd2vVJ+9BVj5JYPT5uteOEjppurGJ7Kn3Muknrm/sQ5bvYxE6M7Xw9hBn7hu4VGbUXmyUCQdB04t89/1O/w1cDnyilFU='
+CHANNEL_SECRET = '84bb8f9b48c8b6635d63a0cd8a555895'
+OPENAI_API_KEY = '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'
+
 
 openai.api_key = OPENAI_API_KEY
 
