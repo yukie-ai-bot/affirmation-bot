@@ -20,8 +20,7 @@ OPENAI_ORG_ID = 'org-9T80ZPzakfOYRteEVGOHd5pN'
 
 client = OpenAI(
     api_key=OPENAI_API_KEY,
-    organization=OPENAI_ORG_ID,
-    project="proj_I2YGJA5rUDSBEJYswpKw7mH3"
+    organization=OPENAI_ORG_ID
 )
 def create_affirmation():
     prompt = "60歳女性に寄り添う、前向きな一言アファメーションを1つください。"
