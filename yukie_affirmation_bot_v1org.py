@@ -20,7 +20,7 @@ OPENAI_ORG_ID = 'org-9T80ZPzakfOYRteEVGOHd5pN'
 
 client = OpenAI(
     api_key=OPENAI_API_KEY,
-    organization=OPENAI_ORG_ID
+    organization=OPENAI_ORG_ID,
     project="proj_I2YGJA5rUDSBEJYswpKw7mH3"
 )
 def create_affirmation():
