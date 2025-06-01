@@ -3,6 +3,9 @@
 # OpenAI API v1+ (sk-proj) + organization対応版
 # 必要ライブラリ: flask, requests, openai>=1.0.0, apscheduler
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask, request
 import requests
 from openai import OpenAI
@@ -13,10 +16,10 @@ import os
 app = Flask(__name__)
 
 # --- 各種キー（Yukie用に差し替え） ---
-CHANNEL_ACCESS_TOKEN = 'lM85m7qbDpqrF6BUpHs3rXa9TQfUi4RMFquKPHub2QxtbZkZJH4EMp65O1JBzrS27axL+6Ey3so3AZNCd2vVJ+9BVj5JYPT5uteOEjppurGJ7Kn3Muknrm/sQ5bvYxE6M7Xw9hBn7hu4VGbUXmyUCQdB04t89/1O/w1cDnyilFU='
-CHANNEL_SECRET = '84bb8f9b48c8b6635d63a0cd8a555895'
-OPENAI_API_KEY = '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'
-OPENAI_ORG_ID = 'org-9T80ZPzakfOYRteEVGOHd5pN'
+CHANNEL_ACCESS_TOKEN = os.getenv('CHANNEL_ACCESS_TOKEN')
+CHANNEL_SECRET = os.getenv('CHANNEL_SECRET')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 
 client = OpenAI(
     api_key=OPENAI_API_KEY,
