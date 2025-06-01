@@ -64,7 +64,7 @@ def test():
     return "テスト送信しました！"
 
 @app.route("/generate")
-def generate_now():
+def generate():
     msg = create_affirmation()
     push_line_message(f"🧘 Yukieさんの今夜のアファメ：\n{msg}")
     return "アファメーション送信しました！"
