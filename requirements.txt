@@ -2,4 +2,4 @@ flask
 requests
 openai>=1.10.0
 apscheduler
-python-dotenv
+python-dotenv==1.0.1
