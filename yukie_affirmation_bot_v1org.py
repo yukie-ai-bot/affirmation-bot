@@ -20,7 +20,7 @@ OPENAI_ORG_ID = 'org-9T80ZPzakfOYRteEVGOHd5pN'
 
 client = OpenAI(
     api_key=OPENAI_API_KEY,
-    project="proj_I2YGJA5rUDSBEJYswpKw7mH3"
+    organization=OPENAI_ORG_ID
 )
 def create_affirmation():
     prompt = "60歳女性に寄り添う、前向きな一言アファメーションを1つください。"
@@ -81,4 +81,3 @@ def index():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-
