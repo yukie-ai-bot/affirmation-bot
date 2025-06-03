@@ -27,7 +27,7 @@ client = OpenAI(
     project="proj_I2YGJA5rUDSBEJYswpKw7mH3"
 )
 def create_affirmation():
-    prompt = "60歳女性に寄り添う、前向きな一言アファメーションを1つください。"
+    prompt = "新しいことにチャレンジ、絶対AIエンジニアで社会に貢献する、絶対猫のSolaチャンネルが大ヒット、絶対願いが叶う一言アファメーションを1つください。"
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -55,10 +55,14 @@ def push_line_message(text):
 
 def morning_job():
     msg = create_affirmation()
+    if len(msg) > 400:
+        msg = msg[:400] + "..."  # 長すぎたらカット
     push_line_message(f"☀️ おはよう Yukieさん！\n{msg}")
 
 def night_job():
     msg = create_affirmation()
+    if len(msg) > 400:
+        msg = msg[:400] + "..."
     push_line_message(f"🌙 今日もおつかれさま Yukieさん\n{msg}")
 
 @app.route("/test")
